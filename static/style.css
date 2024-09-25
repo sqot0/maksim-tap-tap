@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+#app {
+    width: 100%;
+    max-width: 393px;
+    text-align: center;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#user-name, #click-count {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#clicker {
+    position: relative;
+    margin: 20px 0;
+}
+
+#click-img {
+    width: 100%;
+    cursor: pointer;
+    animation: turnAround 5s infinite linear;
+}
+
+@keyframes turnAround {
+    0% {
+      transform:rotate(0)
+    }
+    100% {
+      transform:rotate(360deg)
+    }
+  }
+
+.click-effect {
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+@keyframes moveUpFadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+#upgrades {
+    margin: 20px 0;
+}
+
+.upgrade-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.upgrade-btn {
+    width: 30%;
+    padding: 10px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
